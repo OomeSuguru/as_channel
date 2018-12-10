@@ -1,2 +1,13 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-2">
+    <% @posts.each do |p| %>
+    <div class ="question mt-4">
+    <%= p.content %>
+    <%= link_to '削除',user_trush_path(p.id) , method: :delete, class:'btn btn-default'%>
+    <br>
+    <% end %>
+  </div>
+</div>

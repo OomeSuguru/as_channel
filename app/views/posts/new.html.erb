@@ -1,2 +1,10 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="row">
+  <div class="col-sm-4">
+    <h2>ポストアクション</h2>
+    <%= form_for(@post) do |f| %>
+    <%= f.label :'説明' %>
+    <%= f.text_area :content ,class:'form-control' %>
+    <%= f.submit '作成', class: 'btn btn-success mt-4' %>
+    <% end %>
+  </div>
+</div>
