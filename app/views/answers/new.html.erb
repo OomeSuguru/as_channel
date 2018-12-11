@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-4 col-md-8 col-lg-12 text-center">
+    <h2>回答してみましょう</h2>
+    <%= form_for([@post, @answer]) do |f| %>
+    <%= f.label :'回答する' %>
+    <%= f.text_area :content , :size => "20x10" ,class:'form-control w-400' %>
+    <%= f.submit '作成', class: 'btn btn-success mt-4' %>
+    <% end %>
+  </div>
+</div>

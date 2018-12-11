@@ -16,15 +16,22 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @answers = Answer.where(post_id: @post.id)
   end
 
   def index
-    @posts = current_user.posts
+    # if  current_user.posts.present?
+      @posts = current_user.posts
+      # @post = Post.find(params[:post_id])
+    # else
+      # render :"値がありません"
+    # end
   end
 
   def destroy
     @current_user = current_user
-    @post = @current_user.posts.find_by(params[:post_id])
+    @post = Post.find(params[:post_id])
     @post.destroy
     redirect_to @current_user
   end
