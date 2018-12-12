@@ -5,6 +5,8 @@
 <div class="row">
   <div class="col-sm-4 col-md-8 col-lg-12 text-center">
   <h2>ユーザーのホーム</h2>
+  <a href="https://twitter.com/intent/tweet?button_hashtag=質問をシェア&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #質問をシェア</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <br>
   <%= link_to 'ログアウト',logout_path , method: :delete, class:'btn btn-primary'%>
   <%= link_to '編集',edit_user_path ,class:'btn btn-primary'%>
   <%= link_to ' 質問一覧', user_posts_path(@user) ,class:'btn btn-primary'%>
